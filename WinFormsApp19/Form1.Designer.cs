@@ -29,20 +29,28 @@
         private void InitializeComponent()
         {
             listView1 = new ListView();
+            columnHeader1 = new ColumnHeader();
             SuspendLayout();
             // 
             // listView1
             // 
             listView1.Activation = ItemActivation.OneClick;
             listView1.Alignment = ListViewAlignment.Default;
+            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1 });
+            listView1.FullRowSelect = true;
+            listView1.GridLines = true;
             listView1.LabelWrap = false;
             listView1.Location = new Point(80, 12);
-            listView1.MultiSelect = false;
             listView1.Name = "listView1";
-            listView1.Size = new Size(281, 426);
+            listView1.Size = new Size(563, 426);
             listView1.TabIndex = 0;
+            listView1.TileSize = new Size(600, 50);
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Tile;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Width = 600;
             // 
             // Form1
             // 
@@ -59,5 +67,6 @@
         #endregion
 
         private ListView listView1;
+        private ColumnHeader columnHeader1;
     }
 }
